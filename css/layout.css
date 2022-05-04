@@ -7,3 +7,80 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+#header:after {
+  content: "";
+  display:block;
+  width:100%;
+  height:1px;
+  background-color: #111;
+  position:absolute;
+  top:100px;
+  pointer-events: none;
+}
+
+#header .container {
+  /* 전체 넓이를 1920이상 쓰지 않겠다. */
+  max-width: 1920px;  
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  bor der: 1px solid #f00;
+  position: relative;
+}
+
+#logo {
+  bor der: 1px solid #f00;
+  position: absolute;
+  left: 0;
+}
+.online {
+  position: absolute;
+  right: 0;
+}
+#gnb {
+  bor der: 1px solid #f00;
+}
+
+#gnb .list {
+  display: flex;
+}
+#gnb .list .depth01 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase; /*uppercase / lowercase / capitalize*/
+  display: flex;
+  align-items: center;  
+  height: 100px;    
+  padding-left: 50px;   
+  padding-right: 50px;
+  padding: 0 50px;
+  bor der: 1px solid #f00;
+}
+#gnb .list > li:hover .depth01 {
+  background-color: #bf0c14;
+  color:#fff;
+}
+#gnb .list > li:hover .depth02 {
+  display:block;
+}
+
+#gnb .list .depth02 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding:30px 10px;
+  display:none;
+  background-color: #bf0c14;
+  color:#fff;
+  border-radius: 0 0 10px 10px;
+}
+#gnb .list .depth02 li a {
+  display: block;
+  padding:10px 0;
+}
+#gnb .list .depth02 li a:hover {
+  background-color: #7f060c;
+}
