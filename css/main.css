@@ -1,0 +1,17 @@
+#mainVisual li {
+  /* background-size: contain; */
+  /* 가로세로 종횡비 유지하면서 짤리지 않고 가득 채우기 */
+  background-size: cover;
+  /* 가로세로 종횡비 유지하면서 자르면서 가득 채우기 */
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#mainVisual .visual01 {
+  background-image: url("../images/main/mainVisual01.jpg");
+}
+#mainVisual .visual02 {
+  background-image: url("../images/main/mainVisual02.jpg");
+}
+#mainVisual .visual03 {
+  background-image: url("../images/main/mainVisual03.jpg");
+}
