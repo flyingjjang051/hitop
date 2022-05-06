@@ -74,15 +74,36 @@ a {
   text-transform: uppercase; /*uppercase / lowercase / capitalize*/
   display: flex;
   align-items: center;  
-  height: 100px;    
+  height: 100px;
+  /* line-height: 100px; */
+  /* 글자일때 그리고 한줄일때... */
   padding-left: 50px;   
   padding-right: 50px;
   padding: 0 50px;
-  bor der: 1px solid #f00;
+  position:relative;
 }
+#gnb .list .depth01:after {
+  content:"";
+  display:block;
+  
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left:20px;
+  right:20px;
+  bottom:0;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+/* $red:#bf0c14; */
+
 #gnb .list > li:hover .depth01 {
   background-color: #bf0c14;
   color:#fff;
+}
+#gnb .list > li:hover .depth01:after {
+  transform: scaleX(1);
 }
 #gnb .list > li:hover .depth02 {
   display:block;

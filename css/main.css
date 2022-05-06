@@ -19,6 +19,8 @@
   background-image: url("../images/main/mainVisual03.jpg");
 }
 
+/* sass */
+
 #mainVisual .slogan {
   position: absolute;
   width: 100%;
@@ -92,17 +94,114 @@
   animation-duration: 0.75s;
   animation-iteration-count: infinite;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  animation: mouseAnimation 0.75s linear 0 infinite alternate;
+  animation: mouseAnimation 0.75s ease-in-out 0s infinite alternate;
+}
+
+#quickMenu .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#quickMenu .container ul {
+  display: flex;
+}
+#quickMenu .container ul li {
+  overflow: hidden;
+  position: relative;
+}
+#quickMenu .container ul li:hover:before {
+  opacity: 1;
+}
+#quickMenu .container ul li:hover img {
+  transform: scale(1.2);
+}
+#quickMenu .container ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+#quickMenu .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+#quickMenu .container ul li .txtBox p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#quickMenu .container ul li .txtBox h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 30px;
+  /* 상하 마진이 겹치면 큰것만 먹는다.  마진병합 현상. */
+}
+#quickMenu .container ul li img {
+  vertical-align: top;
+  transition: transform 0.5s ease-in-out;
+}
+
+#business {
+  background-color: #ccc;
+  background-image: url("../images/main/bgBusiness.jpg");
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+#business .titleBox {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#business .titleBox h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#business .container {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #f00;
+}
+#business .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* align-content는 wrap 속성이 적용되어서 두줄이상 일때 정렬 */
+  height: 720px;
+}
+#business .container ul li {
+  position: relative;
+}
+#business .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+#business .container ul li .txtBox h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#business .container ul li img {
+  vertical-align: top;
 }
 
 @keyframes mouseAnimation {
   0% {
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(10px);
-  }
   100% {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
 }
