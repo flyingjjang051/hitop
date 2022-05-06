@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/swiper.min.css" />
     <link rel="stylesheet" href="../css/common.css" />
@@ -92,9 +93,25 @@
           최고의 기술을 가진 최상의 조직! 자연을 닮은 제품을 제공하는 하이탑입니다.
         </p>
       </div>
+      <button class="prev">
+        <span class="material-icons"> chevron_left </span>
+      </button>
+      <button class="next">
+        <span class="material-icons"> chevron_right </span>
+      </button>
+
+      <div class="iconScroll">
+        <span class="icon"></span>
+        <span class="txt">SCROLL</span>
+      </div>
     </div>
     <script>
-      new Swiper("#mainVisual");
+      new Swiper("#mainVisual", {
+        navigation: {
+          nextEl: "#mainVisual .next",
+          prevEl: "#mainVisual .prev",
+        },
+      });
     </script>
   </body>
 </html>

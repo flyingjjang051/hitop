@@ -1,3 +1,6 @@
+#mainVisual {
+  overflow: hidden;
+}
 #mainVisual li {
   /* background-size: contain; */
   /* 가로세로 종횡비 유지하면서 짤리지 않고 가득 채우기 */
@@ -14,4 +17,92 @@
 }
 #mainVisual .visual03 {
   background-image: url("../images/main/mainVisual03.jpg");
+}
+
+#mainVisual .slogan {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+#mainVisual .slogan h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 30px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#mainVisual .slogan p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+#mainVisual button {
+  background: none;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+#mainVisual .prev {
+  left: 50px;
+}
+#mainVisual .next {
+  right: 50px;
+}
+#mainVisual button .material-icons {
+  font-size: 64px;
+  vertical-align: top;
+  /* inline-block요소들이 원래 가지고 있는 하단 여백을 없애는 방법 */
+}
+#mainVisual .iconScroll {
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+#mainVisual .iconScroll .icon {
+  border: 2px solid #fff;
+  width: 24px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+#mainVisual .iconScroll .icon:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 10px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin: 10px auto 0;
+  animation-name: mouseAnimation;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: mouseAnimation 0.75s linear 0 infinite alternate;
+}
+
+@keyframes mouseAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
