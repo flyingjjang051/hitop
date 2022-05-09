@@ -15,6 +15,9 @@ html {
   font-weight: 500;
   margin-bottom: 20px;
 }
+.section .titleBox p {
+  line-height: 1.5;
+}
 
 .section .container {
   width: 1200px;
@@ -215,6 +218,11 @@ html {
   width: 31.33%;
   border: 1px solid #999;
   position: relative;
+  transition: all 0.25s ease-in-out;
+}
+#news .list li:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 #news .list li:after {
   content: "";
@@ -226,11 +234,11 @@ html {
   position: absolute;
   pointer-events: none;
   /* 퍼짐의 정도 */
-  box-shadow: inset 0 0 0 0px #f00;
+  box-shadow: inset 0 0 0 0px #bf0c14;
   transition: box-shadow 0.15s ease-in-out;
 }
 #news .list li:hover:after {
-  box-shadow: inset 0 0 0 10px #f00;
+  box-shadow: inset 0 0 0 4px #bf0c14;
 }
 
 #news .list li img {
@@ -263,9 +271,40 @@ html {
 #news .list li .desc .date {
   color: #999;
 }
+/* news end */
 
+#customer {
+  background-image: url("../images/main/bgCustomer.jpg");
+}
 #customer .titleBox {
-  color: #f00;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#customer .titleBox h2:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  margin: 30px auto;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.btns .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #bf0c14;
+  color: #fff;
+  padding: 0 40px;
+  border-radius: 100px;
+  margin: 0 5px;
 }
 
 @keyframes mouseAnimation {
