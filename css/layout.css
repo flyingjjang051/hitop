@@ -126,3 +126,74 @@ a {
 #gnb .list .depth02 li a:hover {
   background-color: #7f060c;
 }
+/* gnb end */
+
+#footer {
+  background-color: #333;
+  color:#ccc;
+}
+#footer .utilMenu {
+  border-bottom:1px solid #666;
+}
+#footer .utilMenu ul {
+  display: flex;
+  justify-content: center;
+}
+#footer .utilMenu ul li {
+  position: relative;
+}
+#footer .utilMenu ul li:after {
+  content:"";
+  display: block;
+  width:1px;
+  height: 15px;
+  background-color: #ccc;
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+#footer .utilMenu ul li:nth-child(1):after {
+  display: none;
+}
+
+#footer .utilMenu ul li a {
+  display: block;
+  padding:30px 40px;
+}
+#footer .utilMenu ul li a strong {
+  color:#fff;
+  font-weight: 500;
+}
+#footer .addressBox {
+  padding:50px 0;
+}
+#footer .addressBox .container {
+  position: relative;
+  display: flex;
+}
+#footer .addressBox .address {
+  margin-left: 50px;
+}
+#footer .addressBox .address .info {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+#footer .addressBox .address .info span {
+  margin-right: 20px;
+}
+#footer .addressBox .address .copyright {
+  color:#666;
+}
+#footer .addressBox .tel {
+  position: absolute;
+  right:0;
+  display: flex;
+  flex-direction: column;
+}
+#footer .addressBox .tel strong {
+  font-size: 42px;
+  letter-spacing: -0.01em;
+  margin-top: 10px;
+}
