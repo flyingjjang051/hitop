@@ -214,9 +214,22 @@ html {
 #news .list li {
   width: 31.33%;
   border: 1px solid #999;
-  box-shadow: inset 0 0 0 0 #f00;
+  position: relative;
 }
-#news .list li:hover {
+#news .list li:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  pointer-events: none;
+  /* 퍼짐의 정도 */
+  box-shadow: inset 0 0 0 0px #f00;
+  transition: box-shadow 0.15s ease-in-out;
+}
+#news .list li:hover:after {
   box-shadow: inset 0 0 0 10px #f00;
 }
 
